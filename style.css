@@ -1,0 +1,85 @@
+/* Definição de variáveis CSS para as cores usadas no design */
+:root {
+    --cor-fundo: #090029;
+    /*cor do fundo*/
+    --cor-principal: #ffffff;
+    /*cores da caixa principal*/
+    --cor-secundaria: #ffffff;
+    /*cores da caixa secundaria*/
+    --cor-destaque: #ff0000;
+    /*cor texto quest/Buttom*/
+    --cor-texto: #000000;
+    /*cor do texto pergunta*/
+    --cor-fadeButtom: #cacaca;
+    /*cor fadebuttom*/
+}
+
+/* Configuração do estilo do corpo da página */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo da caixa principal */
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Estilo para o cabeçalho principal */
+h1 {
+    color: var(--cor-destaque);
+}
+
+/* Estilo para os botões */
+button {
+    background-color: var(--cor-destaque);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    color: var(--cor-principal);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+/* Estilo ao passar o mouse sobre o botão */
+button:hover {
+    background-color: var(--cor-fadeButtom);
+    color: var(--cor-texto);
+}
+
+/* Estilo para a caixa de resultado */
+.caixa-resultado {
+    display: none;
+    /* Inicialmente oculta */
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 8px;
+}
+
+/* Classe para exibir a caixa de resultado */
+.caixa-resultado.mostrar {
+    opacity: 1;
+}
+
+/* Estilo para o texto do resultado */
+.texto-resultado {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+}
