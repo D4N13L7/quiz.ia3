@@ -1,17 +1,11 @@
 /* Definição de variáveis CSS para as cores usadas no design */
 :root {
-    --cor-fundo: #090029;
-    /*cor do fundo*/
-    --cor-principal: #ffffff;
-    /*cores da caixa principal*/
-    --cor-secundaria: #ffffff;
-    /*cores da caixa secundaria*/
-    --cor-destaque: #3700ff;
-    /*cor texto quest/Buttom*/
-    --cor-texto: #000000;
-    /*cor do texto pergunta*/
-    --cor-fadeButtom: #cacaca;
-    /*cor fadebuttom*/
+    --cor-fundo: #090029; /* cor do fundo */
+    --cor-principal: #ffffff; /* cores da caixa principal */
+    --cor-secundaria: #ffffff; /* cores da caixa secundária */
+    --cor-destaque: #3700ff; /* cor texto quest/Buttom */
+    --cor-texto: #000000; /* cor do texto pergunta */
+    --cor-fadeButtom: #cacaca; /* cor fadebuttom */
 }
 
 /* Configuração do estilo do corpo da página */
@@ -63,8 +57,7 @@ button:hover {
 
 /* Estilo para a caixa de resultado */
 .caixa-resultado {
-    display: none;
-    /* Inicialmente oculta */
+    display: none; /* Inicialmente oculta */
     text-align: center;
     padding: 20px;
     background-color: var(--cor-secundaria);
