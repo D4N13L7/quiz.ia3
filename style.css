@@ -103,3 +103,14 @@ button:hover {
     background-color: var(--cor-fadeButtom); /* Cor de fundo ao passar o mouse */
 }
 
+/* Adiciona uma animação de fade-in para a caixa de resultado */
+.caixa-resultado {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.caixa-resultado.mostrar {
+    opacity: 1;
+}
+
+
