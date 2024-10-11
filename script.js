@@ -97,6 +97,9 @@ function mostraResultado() {
     caixaResultado.style.display = 'block'; // Mostra a caixa de resultado
     setTimeout(() => caixaResultado.classList.add('mostrar'), 10);
 
+    // Chama a função de confete
+    criarConfete();
+
     let mensagem;
     if (pontuacao === perguntas.length) {
         mensagem = "Parabéns! Você acertou todas as perguntas!";
@@ -130,6 +133,21 @@ function mostraResultado() {
     caixaResultado.innerHTML = ''; // Limpa conteúdo anterior
     caixaResultado.appendChild(textoResultado);
     caixaResultado.appendChild(botaoReiniciar);
+}
+
+function criarConfete() {
+    for (let i = 0; i < 100; i++) {
+        const confete = document.createElement('div');
+        confete.classList.add('confete');
+        confete.style.left = `${Math.random() * 100}vw`;
+        confete.style.animationDuration = `${Math.random() * 3 + 2}s`; // Dura entre 2 e 5 segundos
+        document.body.appendChild(confete);
+
+        // Remove o confete após a animação
+        confete.addEventListener('animationend', () => {
+            confete.remove();
+        });
+    }
 }
 
 // Inicializa a primeira pergunta
