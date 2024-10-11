@@ -84,7 +84,26 @@ function mostraResultado() {
     caixaPrincipal.style.display = 'none'; // Esconde a caixa de perguntas
     caixaResultado.style.display = 'block'; // Mostra a caixa de resultado
     setTimeout(() => caixaResultado.classList.add('mostrar'), 10);
-    textoResultado.textContent = `Você acertou ${pontuacao} de ${perguntas.length} perguntas!`;
+
+    let mensagem;
+    if (pontuacao === perguntas.length) {
+        mensagem = "Parabéns! Você acertou todas as perguntas!";
+    } else if (pontuacao >= perguntas.length / 2) {
+        mensagem = "Bom trabalho! Você acertou mais da metade!";
+    } else {
+        mensagem = "Você pode melhorar! Tente novamente.";
+    }
+
+    let emoji;
+    if (pontuacao === perguntas.length) {
+        emoji = "🎉"; // Emojis de comemoração
+    } else if (pontuacao >= perguntas.length / 2) {
+        emoji = "👍"; // Emojis de positivo
+    } else {
+        emoji = "😞"; // Emojis de desapontamento
+    }
+
+    textoResultado.textContent = `${emoji} ${mensagem} Você acertou ${pontuacao} de ${perguntas.length} perguntas!`;
 
     const botaoReiniciar = document.createElement('button');
     botaoReiniciar.textContent = 'Reiniciar';
