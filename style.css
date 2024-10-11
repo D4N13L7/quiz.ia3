@@ -83,3 +83,23 @@ button:hover {
     font-size: 1.2rem;
     color: var(--cor-texto);
 }
+
+/* Estilo da caixa de tempo */
+.caixa-tempo {
+    background-color: var(--cor-principal); /* Fundo da caixa */
+    border: 2px solid var(--cor-destaque); /* Borda destacada */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaço abaixo da caixa */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-align: center; /* Centraliza o texto */
+    color: var(--cor-texto); /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+}
+
+.caixa-tempo:hover {
+    background-color: var(--cor-fadeButtom); /* Cor de fundo ao passar o mouse */
+}
+
