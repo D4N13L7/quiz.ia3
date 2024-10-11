@@ -69,12 +69,24 @@ function mostraPergunta() {
 
 function verificaResposta(selecionada) {
     clearInterval(cronometro); // Para o cronômetro
+    const botoes = caixaAlternativas.querySelectorAll('button');
+    
+    // Destaca a resposta correta e a resposta errada
+    botoes.forEach((botao, index) => {
+        if (index === perguntaAtual.correta) {
+            botao.style.backgroundColor = 'green'; // Resposta correta
+        } else if (index === selecionada) {
+            botao.style.backgroundColor = 'red'; // Resposta errada
+        }
+        botao.disabled = true; // Desabilita todos os botões após a resposta
+    });
+
     if (selecionada === perguntaAtual.correta) {
         pontuacao++;
     }
     atual++;
     if (atual < perguntas.length) {
-        mostraPergunta();
+        setTimeout(mostraPergunta, 1000); // Espera um segundo antes de mostrar a próxima pergunta
     } else {
         mostraResultado();
     }
